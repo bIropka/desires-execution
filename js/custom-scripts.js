@@ -1,6 +1,6 @@
 $(window).ready(function () {
 
-    if($(window).width() < 1281) {
+    if($(window).width() < 769) {
         $('.link-phone').insertAfter('.order-free');
         $('.link-email').insertAfter('.link-phone');
         $('.form-order').insertAfter('.you-will-know');
@@ -12,7 +12,7 @@ $(window).ready(function () {
 
     $(window).resize(function() {
 
-        if($(window).width() < 1281) {
+        if($(window).width() < 769) {
             $('.link-phone').insertAfter('.order-free');
             $('.link-email').insertAfter('.link-phone');
             $('.form-order').insertAfter('.you-will-know');

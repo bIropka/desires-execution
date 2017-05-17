@@ -126,7 +126,7 @@ header[role='banner'] .wrapper-inner {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-@media (max-width: 1280px) {
+@media (max-width: 768px) {
   header[role='banner'] .wrapper-inner {
     justify-content: center;
     padding-top: 10px;
@@ -147,6 +147,11 @@ header[role='banner'] .logo {
     height: 100%;
   }
 }
+@media (max-width: 640px) {
+  header[role='banner'] .logo {
+    height: 60px;
+  }
+}
 .link-phone {
   font-family: 'AcademyC Bold', sans-serif;
   color: #fff;
@@ -155,6 +160,16 @@ header[role='banner'] .logo {
 .link-phone:hover {
   text-decoration: none;
   color: #cc6699;
+}
+@media (max-width: 1280px) {
+  .link-phone {
+    font-size: 36px;
+  }
+}
+@media (max-width: 980px) {
+  .link-phone {
+    font-size: 28px;
+  }
 }
 .link-email {
   font-family: 'Open Sans', sans-serif;
@@ -170,9 +185,30 @@ header[role='banner'] .logo {
   background: url(../source/images/icon-mail.png) no-repeat 0 0;
   margin-right: 15px;
 }
+@media (max-width: 768px) {
+  .link-email:before {
+    display: none;
+  }
+}
 .link-email:hover {
   color: #ff6666;
   text-decoration: none;
+}
+@media (max-width: 1280px) {
+  .link-email {
+    font-size: 32px;
+  }
+}
+@media (max-width: 980px) {
+  .link-email {
+    font-size: 26px;
+  }
+  .link-email:before {
+    width: 32px;
+    height: 24px;
+    background: url(../source/images/icon-mail.png) no-repeat 0 0;
+    background-size: cover;
+  }
 }
 /***********************************************************************************************************************
 *********** top-block
@@ -180,24 +216,31 @@ header[role='banner'] .logo {
 .top-block {
   display: block;
   width: 100%;
-  height: 1415px;
-  background: url(../source/images/background.jpg) no-repeat center;
+  background: url(../source/images/background.jpg) no-repeat top center;
   background-size: cover;
   position: relative;
+  padding: 270px 0;
 }
 @media (max-width: 1280px) {
   .top-block {
-    background: url(../source/images/background.jpg) no-repeat center top;
-    background-size: cover;
+    background: url(../source/images/background.jpg) no-repeat calc(100% + 70px) 0;
+    background-size: 1350px auto;
+    height: auto;
+    padding-top: 130px;
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 980px) {
+  .top-block {
+    background: url(../source/images/background.jpg) no-repeat calc(100% + 130px) 0;
+    background-size: 1300px auto;
     height: auto;
   }
 }
-.top-block .wrapper-inner {
-  padding-top: 236px;
-}
-@media (max-width: 1280px) {
-  .top-block .wrapper-inner {
-    padding-top: 130px;
+@media (max-width: 640px) {
+  .top-block {
+    padding-top: 75px;
+    padding-bottom: 50px;
   }
 }
 .top-block h1 {
@@ -215,9 +258,32 @@ header[role='banner'] .logo {
   text-shadow: 0 0 20px #000000;
   background: radial-gradient(rgba(0, 0, 0, 0.75), transparent 70%);
 }
+.top-block h1 span:first-of-type br {
+  display: none;
+}
 @media (max-width: 1280px) {
   .top-block h1 span:first-of-type {
-    font-size: 40px;
+    width: auto;
+    font-size: 48px;
+    background: none;
+  }
+  .top-block h1 span:first-of-type br {
+    display: block;
+  }
+}
+@media (max-width: 980px) {
+  .top-block h1 span:first-of-type {
+    font-size: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .top-block h1 span:first-of-type {
+    font-size: 28px;
+  }
+}
+@media (max-width: 480px) {
+  .top-block h1 span:first-of-type {
+    font-size: 20px;
   }
 }
 .top-block h1 span:last-of-type {
@@ -246,31 +312,79 @@ header[role='banner'] .logo {
     bottom: -30px;
   }
 }
+@media (max-width: 1280px) {
+  .top-block h1 span:last-of-type {
+    bottom: -35px;
+  }
+}
+@media (max-width: 768px) {
+  .top-block h1 span:last-of-type {
+    font-size: 18px;
+    bottom: -30px;
+  }
+}
+@media (max-width: 480px) {
+  .top-block h1 span:last-of-type {
+    font-size: 16px;
+    bottom: -32px;
+  }
+}
 .top-block .order-free {
   display: none;
 }
-@media (max-width: 1280px) {
+@media (max-width: 980px) {
   .top-block .order-free {
     display: inline-block;
-    padding: 13px 45px 18px;
-    background: #ff99cc;
-    border: 1px solid #ff99cc;
+    padding: 11px 45px 18px;
+    background: #cc6699;
+    border: 1px solid #cc6699;
     color: #fff;
     font-family: 'AcademyC Bold', sans-serif;
     font-size: 40px;
     border-radius: 50px;
     margin-top: 100px;
     line-height: 1;
+    -webkit-box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.4);
   }
   .top-block .order-free:hover {
     background: #fff;
-    color: #ff99cc;
-    border: 1px solid #ff99cc;
+    color: #cc6699;
+    border: 1px solid #cc6699;
+  }
+}
+@media (max-width: 640px) {
+  .top-block .order-free {
+    margin-top: 370px;
+    font-size: 32px;
+    -webkit-box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.4);
+  }
+}
+@media (max-width: 480px) {
+  .top-block .order-free {
+    font-size: 24px;
   }
 }
 .top-block .link-phone {
   display: block;
   margin: 25px 0;
+  text-shadow: 0 0 10px #000000;
+}
+@media (max-width: 768px) {
+  .top-block .link-phone {
+    font-size: 32px;
+  }
+}
+.top-block .link-email {
+  text-shadow: 0 0 10px #000000;
+}
+@media (max-width: 768px) {
+  .top-block .link-email {
+    font-size: 26px;
+  }
 }
 /***********************************************************************************************************************
 *********** form-order-
@@ -344,12 +458,7 @@ header[role='banner'] .logo {
 }
 @media (max-width: 1280px) {
   .form-order {
-    margin: 40px auto;
-  }
-}
-@media (max-width: 900px) {
-  .form-order {
-    width: 100%;
+    width: 600px;
     height: auto;
     min-height: 0;
   }
@@ -365,7 +474,26 @@ header[role='banner'] .logo {
     margin: 15px 0;
   }
 }
-@media (max-width: 540px) {
+@media (max-width: 768px) {
+  .form-order {
+    margin: 0 auto 40px;
+  }
+}
+@media (max-width: 640px) {
+  .form-order {
+    width: 100%;
+    background: none;
+    border: 10px solid #cc6699;
+    padding: 25px;
+  }
+  .form-order .title br {
+    display: none;
+  }
+  .form-order label {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
   .form-order .title span:first-of-type {
     font-size: 24px;
   }
@@ -393,6 +521,11 @@ header[role='banner'] .logo {
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .you-will-know .title {
+    font-size: 32px;
+  }
 }
 .you-will-know ul {
   display: flex;
