@@ -426,6 +426,57 @@ header[role='banner'] {
   padding: 55px 60px;
   text-align: center;
 
+.close-window {
+  display: none;
+
+  @media(max-width: 768px) {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #b96186;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      transform-origin: center;
+      transition: .4s;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+
+      &:before {
+        transform: rotate(25deg);
+      }
+
+      &:after {
+        transform: rotate(-25deg);
+      }
+
+    }
+
+  }
+
+}
+
   .title {
     line-height: 1;
 
@@ -518,18 +569,20 @@ header[role='banner'] {
 
   }
 
-  @media(max-width: 768px) {
-    margin: 0 auto 40px;
-  }
 
-  @media(max-width: 640px) {
+  @media(max-width: 768px) {
     width: 100%;
-    background: none;
+    background: #fff;
     border: 10px solid #cc6699;
     padding: 25px;
 
     .title br {
-      display: none;
+      margin: 10px 0 0 0;
+
+      br {
+        display: none;
+      }
+
     }
 
     label {
@@ -561,6 +614,31 @@ header[role='banner'] {
   }
 
 }
+
+@media(max-width: 768px) {
+
+  .form-wrap {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    z-index: 1001;
+  }
+
+  .form-order {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 75px;
+  }
+
+}
+
 
 /***********************************************************************************************************************
 *********** you-will-know

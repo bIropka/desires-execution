@@ -395,6 +395,46 @@ header[role='banner'] .logo {
   padding: 55px 60px;
   text-align: center;
 }
+.form-order .close-window {
+  display: none;
+}
+@media (max-width: 768px) {
+  .form-order .close-window {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+  .form-order .close-window:before,
+  .form-order .close-window:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #b96186;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform-origin: center;
+    transition: .4s;
+  }
+  .form-order .close-window:before {
+    transform: rotate(45deg);
+  }
+  .form-order .close-window:after {
+    transform: rotate(-45deg);
+  }
+  .form-order .close-window:hover:before {
+    transform: rotate(25deg);
+  }
+  .form-order .close-window:hover:after {
+    transform: rotate(-25deg);
+  }
+}
 .form-order .title {
   line-height: 1;
 }
@@ -472,17 +512,15 @@ header[role='banner'] .logo {
 }
 @media (max-width: 768px) {
   .form-order {
-    margin: 0 auto 40px;
-  }
-}
-@media (max-width: 640px) {
-  .form-order {
     width: 100%;
-    background: none;
+    background: #fff;
     border: 10px solid #cc6699;
     padding: 25px;
   }
   .form-order .title br {
+    margin: 10px 0 0 0;
+  }
+  .form-order .title br br {
     display: none;
   }
   .form-order label {
@@ -500,6 +538,26 @@ header[role='banner'] .logo {
   .form-order .note {
     font-size: 16px;
     margin: 15px 0;
+  }
+}
+@media (max-width: 768px) {
+  .form-wrap {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    z-index: 1001;
+  }
+  .form-order {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 75px;
   }
 }
 /***********************************************************************************************************************
